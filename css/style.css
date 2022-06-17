@@ -86,12 +86,50 @@ input[type="search"]{
     gap:20px;
     justify-self: end;
 }
+
+.header-second-row> :first-child > img{
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+}
 .option-second-row{
     border-radius: 20px;
     background-color: gray;
-    width: 50px;
+    width: 70px;
     height: 20px;
     color: white;
     padding: 10px;
     text-align: center;
+}
+.main-content{
+    background-color: rgb(235, 235, 235);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 10px;
+}
+.projects-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.project{
+    background-color: white;
+    padding: 10px;
+}
+.sidebar{
+    display: grid;
+}
+.announcement,
+.trend
+{
+    font-size: .7rem;
+    background-color: white;
+    display: grid;
+
+}
+.sidebar-announcements::before{
+    content: "Announcement";
+}
+.sidebar-trendings::before{
+    content: "Trending";
 }
