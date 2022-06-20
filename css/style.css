@@ -26,13 +26,8 @@ input[type="search"]{
     height: 100vh;
     display: grid;
     grid-template: 1fr 3fr / 1fr 5fr;
-    gap: 2px;
 }
 
-.container>div{
-    border: black solid 1px;
-
-}
 .dashboard-label{
     display: flex;
     align-items: center;
@@ -62,12 +57,17 @@ input[type="search"]{
     display: grid;
     grid-auto-rows: auto;
     align-content: start;
-    gap: 10px;
+    gap: 1rem;
 }
 
 .header{
+    margin-bottom: 7px;
+    display: grid;
     padding-left: 20px;
     padding-top: 10px;
+    padding-bottom: .5rem;
+    gap:1rem;
+    box-shadow: 10px 0px 7px 7px rgb(167, 167, 167);
 }
 .header-first-row{
     display: grid;
@@ -88,6 +88,7 @@ input[type="search"]{
 
 
 .header-second-row{
+    padding-left: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -123,7 +124,8 @@ input[type="search"]{
     background-color: rgb(235, 235, 235);
     display: grid;
     grid-template-columns: 3fr 1fr;
-    gap: 1rem;
+    gap: 10px;
+    padding: 20px;
 }
 .projects-container{
     display: grid;
