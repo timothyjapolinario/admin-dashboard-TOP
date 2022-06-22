@@ -142,7 +142,15 @@ input[type="search"]{
 .project{
     background-color: white;
     padding: 10px;
+    border-left: 8px solid var(--secondary);
 }
+
+.project-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+}
+
 .sidebar{
     display: grid;
 }
