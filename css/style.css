@@ -175,6 +175,7 @@ input[type="search"]:focus{
 .sidebar{
     display: grid;
     margin-top: 1rem;
+    gap:20px;
 }
 
 .announcement,
