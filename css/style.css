@@ -20,8 +20,12 @@ input{
 }
 input[type="search"]{
     border-radius: 20px;
-    width: 90%;
-
+    width: 100%;
+    border: var(--secondary) 2px solid;
+}
+input[type="search"]:focus{
+    border: var(--secondary-dark) 3px solid;
+    outline-color: transparent;
 }
 #search-bar{
     display:flex;
@@ -78,7 +82,7 @@ input[type="search"]{
 }
 .header-first-row{
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     align-items: start;
 }
 .header-first-row img{
@@ -126,7 +130,7 @@ input[type="search"]{
 }
 .option-second-row{
     border-radius: 20px;
-    background-color: gray;
+    background-color: var(--secondary-dark);
     width: 70px;
     height: 20px;
     color: white;
@@ -163,6 +167,10 @@ input[type="search"]{
 .project-title{
     font-size: 1.5rem;
     font-weight: bold;
+}
+.project-title > a > img{
+    width: 15px;
+    height: 15px;
 }
 
 .sidebar{
