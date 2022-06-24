@@ -5,6 +5,13 @@
     --secondary: #29a0b1;
 }
 
+*{
+    font-family: 'Nunito Sans', sans-serif;
+}
+.dashboard-label{
+    font-family: 'Nunito Sans', sans-serif;
+}
+
 a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: inherit;
