@@ -1,0 +1,237 @@
+:root{
+    --primary-light: #ddffe7;
+    --primary: #98D7C2;
+    --secondary-dark: #167d7f;
+    --secondary: #29a0b1;
+}
+
+*{
+    font-family: 'Nunito Sans', sans-serif;
+}
+.dashboard-label{
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+input{
+    -webkit-appearance: none;
+    appearance: none;
+}
+input[type="search"]{
+    border-radius: 20px;
+    width: 100%;
+    border: var(--secondary) 2px solid;
+}
+input[type="search"]:focus{
+    border: var(--secondary-dark) 3px solid;
+    outline-color: transparent;
+}
+#search-bar{
+    display:flex;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: 1fr 3fr / 1fr 5fr;
+}
+
+.dashboard-label{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 5px;
+    color: var(--primary-light);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.dashboard-label>img{
+    width: 50px;
+    height: 50px;
+}
+.dashboard-option{
+    color:var(--primary-light);
+    font-size: 1rem;
+}
+.dashboard-option>img{
+    width: 20px;
+    height: 20px;
+    fill: var(--primary-light);
+}
+.dashboard{
+    background-color: var(--secondary-dark);
+    padding-left: 20px;
+    grid-row: 1 / 3;
+    display: grid;
+    grid-auto-rows: auto;
+    align-content: start;
+    gap: 1rem;
+}
+
+.header{
+    margin-bottom: 7px;
+    display: grid;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    gap:1rem;
+    box-shadow: 10px 0px 7px 7px rgb(167, 167, 167);
+}
+.header-first-row{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: start;
+}
+.header-first-row img{
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+}
+.header-first-row>:nth-child(2){
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, min-content);
+    justify-self: end;
+}
+
+
+.header-second-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.header-second-row>:nth-child(1){
+    display: grid;
+    grid-template: 1fr 2fr / 1fr 4fr;
+    justify-self: start;
+    gap: 10px;
+    font-weight: bold;
+}
+.header-second-row>:nth-child(1)>:nth-child(3){
+    font-size: 1.3rem;
+}
+.header-second-row>:nth-child(1) > img{
+    grid-row: 1 / 3;
+}
+.header-second-row>:nth-child(2){
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:20px;
+    justify-self: end;
+}
+
+.header-second-row> :first-child > img{
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+}
+.option-second-row{
+    border-radius: 20px;
+    background-color: var(--secondary-dark);
+    width: 70px;
+    height: 20px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.main-content{
+    background-color: rgb(235, 235, 235);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 10px;
+    padding: 20px;
+}
+.main-content-title{
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.projects-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.project{
+    background-color: white;
+    padding: 30px;
+    border-left: 8px solid var(--secondary);
+    display: grid;
+    gap: .3rem;
+}
+.project>:nth-child(3){
+    justify-self: end;
+}
+.project-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.project-title > a > img{
+    width: 15px;
+    height: 15px;
+}
+
+.sidebar{
+    display: grid;
+    margin-top: 1rem;
+    gap:20px;
+}
+
+.announcement,
+.trend
+{
+    font-size: .7rem;
+    background-color: white;
+    display: grid;
+    padding: 1rem;
+   
+
+}
+
+.announcement-title{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.announcement-content{
+    font-size: .8rem;
+    border-bottom: rgb(170, 169, 169) 1px solid;
+    padding-bottom: 1.5rem;
+}
+.sidebar-announcements::before{
+    content: "Announcement";
+    font-size: 1.2rem;
+}
+.sidebar-trendings::before{
+    content: "Trending";
+    font-size: 1.2rem;
+}
+.trend-profile-name{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.trend-project{
+    font-size: .9rem;
+}
+.trend{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 2fr;
+
+}
+.trend-profile-icon{
+    grid-row: 1/3;
+    justify-self: center;
+    align-self: center;
+}
+.trend-profile-icon > img{
+    width: 2rem;
+    height: 2rem;
+}
