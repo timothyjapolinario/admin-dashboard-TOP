@@ -70,7 +70,7 @@ const changeFavoriteStatus = (button, project)=>{
 }
 
 const deleteProject = (parentNode) =>{
-    parent.remove()
+    parentNode.remove()
 }
 
 
