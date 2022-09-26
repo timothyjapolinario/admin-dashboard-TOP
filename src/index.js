@@ -1,3 +1,6 @@
+import Project from './modules/Project.js'
+import generateProjectUi from './modules/ProjectUI';
+
 
 let projects = document.querySelectorAll(".project");
 
@@ -43,3 +46,18 @@ function copy_link_to_clipboard(link){
 function delete_project(project){
     project.remove()
 }
+
+const testUI = ()=>{
+    const projectContainer = document.querySelector('.projects-container')
+    const myProject = Project(
+        "Etch-A-Sketch",
+        "A drawing web application. This focuses on the use of CSS Grid and Javascript.",
+        "https://timothyjapolinario.github.io/etch-a-sketch/",
+        true
+    )
+    const projectUI = generateProjectUi(myProject)
+    console.log(projectUI)
+    projectContainer.appendChild(projectUI)
+
+}
+testUI()
