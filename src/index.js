@@ -1,6 +1,8 @@
 import Project from './modules/Project.js'
 import generateProjectUi from './modules/ProjectUI';
 import * as Storage from './modules/Storage';
+import generateAnnouncementUI from './modules/AnnouncementUI'
+import Announcement from './modules/Announcement'
 
 let projects = document.querySelectorAll(".project");
 
@@ -8,13 +10,22 @@ let projects = document.querySelectorAll(".project");
 
 const initProjects = () =>{
     const projectContainer = document.querySelector('.projects-container')
-    let projects = getAllProjects("project", "identifier")
+    let projects = getAllObjectFromLocalStorage("project")
     projects.forEach(project => {
         projectContainer.appendChild(generateProjectUi(project))
     })
 }
 
-const getAllProjects = (identifier) =>{
+const initAnnouncement = () =>{
+    const announcementContainer = document.querySelector('.sidebar-announcements')
+    console.log(announcementContainer)
+    let announcements = getAllObjectFromLocalStorage("ann")
+    announcements.forEach(announcement => {
+        announcementContainer.appendChild(generateAnnouncementUI(announcement))
+    })
+}
+
+const getAllObjectFromLocalStorage = (identifier) =>{
     return Storage.getAllItem(identifier)
 }
 
@@ -52,5 +63,27 @@ const addDummyProjects = () =>{
     Storage.addItem(projectFour.title,"project", projectFour)
 }
 
+
+const addDummyAnnouncements = () => {
+    const ann1 = Announcement(
+        'MisterFapoh for Internship!',
+        'MisterFapoh is looking for an internship! Do not miss this opportunity!'
+    )
+    Storage.addItem('ann1', 'ann', ann1)
+    const ann2 = Announcement(
+        'Porksteak for lunch!',
+        'July 24 2022 will have Porksteak for lunch! Ready your stomach for this heavy delicious meal!'
+    )
+    Storage.addItem('ann2', 'ann', ann2)
+    const ann3 = Announcement(
+        'Charger died.',
+        'My charger broke down. Lasted for only like 3 years'
+    )
+    Storage.addItem('ann3', 'ann', ann3)
+}
+
+
 addDummyProjects()
 initProjects()
+addDummyAnnouncements()
+initAnnouncement()
