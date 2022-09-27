@@ -1,8 +1,10 @@
 import Project from './modules/Project.js'
-import generateProjectUi from './modules/ProjectUI';
+import generateProjectUi from './modules/ProjectUI.js';
 import * as Storage from './modules/Storage';
 import generateAnnouncementUI from './modules/AnnouncementUI'
 import Announcement from './modules/Announcement'
+import Trend from './modules/Trend'
+import generateTrendUI from './modules/TrendUI'
 
 let projects = document.querySelectorAll(".project");
 
@@ -18,10 +20,17 @@ const initProjects = () =>{
 
 const initAnnouncement = () =>{
     const announcementContainer = document.querySelector('.sidebar-announcements')
-    console.log(announcementContainer)
     let announcements = getAllObjectFromLocalStorage("ann")
     announcements.forEach(announcement => {
         announcementContainer.appendChild(generateAnnouncementUI(announcement))
+    })
+}
+
+const initTrend = () =>{
+    const trendContainer = document.querySelector('.sidebar-trendings')
+    let trends = getAllObjectFromLocalStorage("trd")
+    trends.forEach(trend => {
+        trendContainer.appendChild(generateTrendUI(trend))
     })
 }
 
@@ -82,8 +91,36 @@ const addDummyAnnouncements = () => {
     Storage.addItem('ann3', 'ann', ann3)
 }
 
+const addDummyTrend = () => {
+    const trd1 = Trend(
+        '@mabzzz',
+        './images/mabzzz-icon.png',
+        'An upside down building.'
+    )
+
+    console.log(trd1)
+
+    Storage.addItem('trd1', 'trd', trd1)
+    const trd2 = Trend(
+        '@geriri',
+        './images/geriri-icon.png',
+        'An airport inside a mall.'
+    )
+    Storage.addItem('trd2', 'trd', trd2)
+
+    const trd3 = Trend(
+        '@supahxad',
+        './images/jasper-icon.png',
+        'SadBoiDrug; A new type of illegal drug.'
+    )
+    Storage.addItem('trd3', 'trd', trd3)
+}
 
 addDummyProjects()
 initProjects()
+
 addDummyAnnouncements()
 initAnnouncement()
+
+addDummyTrend()
+initTrend()

@@ -10,7 +10,6 @@ const Project = (title, description, link, isFavorite) => {
         isFavorite:isFavorite,
     }
     let myInterface = Object.create(projectInterface(state))
-    console.log(myInterface)
     return Object.assign(myInterface,state)
 }
 

@@ -61,12 +61,10 @@ const changeFavoriteStatus = (button, project)=>{
     if(project.isFavorite){
         project.isFavorite = false
         button.src = "./images/heart-outline.svg"
-        console.log(project)
         return
     }
     project.isFavorite = true
     button.src = "./images/heart.svg"
-    console.log(project)
 }
 
 const deleteProject = (parentNode) =>{

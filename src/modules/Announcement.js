@@ -7,7 +7,6 @@ const Announcement = (title, content) => {
         content:content
     }
     let myInterface = Object.create(announcementInterface(state))
-    console.log(myInterface)
     return Object.assign(myInterface,state)
 }
 
